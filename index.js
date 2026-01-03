@@ -1,11 +1,10 @@
 import express from 'express';
-import routers from './routers/studentRouters.js';
+import router from './routers/firstRouters.js';
+
 const app = express();
-app.use(express.json())
-app.use('/',routers);
-//app.get('/',(req,res)=>{
-   // res.send("hello this is from backend");
-//})
-app.listen(7007,()=>{
-    console.log("server running at port 7007")
+
+app.use('/get-data', router);
+
+app.listen(7007, () => {
+    console.log("server running at port 7007");
 });
