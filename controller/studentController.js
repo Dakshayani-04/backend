@@ -7,4 +7,5 @@ const addStudents = (req,res)=>{
     console.log(data);
     res.send("data added");
 };
+
 export {getStudentDetails,addStudents};
